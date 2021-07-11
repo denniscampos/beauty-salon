@@ -1,0 +1,325 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/******************************************
+/* HEADER
+/*******************************************/
+.navbar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.navbar-links {
+  display: flex;
+  justify-items: space-between;
+}
+
+.logo {
+  object-fit: contain;
+  height: 50px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+ul > li {
+  padding: 0 15px;
+  flex: 1;
+}
+
+ul > li > a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+ul > a {
+  padding: 0 15px;
+}
+
+ul > a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.content-right {
+  display: flex;
+}
+
+.content-right > a {
+  padding: 0 15px;
+  text-decoration: none;
+  color: black;
+}
+
+/* responsive navbar */
+.toggle-bar {
+  position: absolute;
+  top: 1.2rem;
+  right: 0.2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background: black;
+  border-radius: 10px;
+}
+
+/******************************************
+/* MAIN
+/*******************************************/
+
+main {
+  color: black;
+  height: 1000px;
+}
+
+.hero-img {
+  background-image: url(img/salon-main-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80%;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-left: 100px;
+  /* align-items: center;
+  justify-content: center;
+  height: 100vh; */
+}
+
+.hero-top {
+  width: 60%;
+  padding: 30px 0;
+}
+
+.hero-top > h1 {
+  font-size: 6em;
+  font-weight: lighter;
+  color: white;
+}
+
+.hero-top > p {
+  color: white;
+  font-size: 1.7vw;
+  padding: 10px 0;
+}
+
+.hero-top > button {
+  margin: 20px 0;
+  padding: 15px 20px;
+  color: white;
+  background: black;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-bottom {
+  color: white;
+  background: black;
+  width: 250px;
+  padding: 30px 15px;
+}
+
+.hero-bottom > span {
+  font-size: 1rem;
+}
+
+.hero-bottom > p > span {
+  font-size: 3rem;
+}
+
+.hero-bottom > p {
+  margin: 25px 0;
+  line-height: 2rem;
+}
+
+.hero-bottom > button {
+  border: none;
+  margin: 20px 0;
+  padding: 15px 20px;
+  background: white;
+  cursor: pointer;
+}
+
+/******************************************
+/* DESCRIPTION
+/*******************************************/
+
+.description {
+  width: 964px;
+  margin: 0 auto;
+}
+
+.description1,
+.description2,
+.description3 {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.description1 img,
+.description2 img,
+.description3 img {
+  height: 100px;
+  width: 120px;
+}
+
+/******************************************
+/* MOMENTUM
+/*******************************************/
+
+.momentum {
+  width: 964px;
+  margin: 0 auto;
+}
+
+.momentum__left {
+  float: left;
+  margin: 0 1.5%;
+  width: 482px;
+}
+
+.momentum__image {
+  display: inline-block;
+  margin: 0 1.5%;
+  width: 25%;
+}
+
+.momentum__image img {
+  width: 400px;
+}
+
+.read {
+  background: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  padding: 20px 20px;
+}
+
+/******************************************
+/* STYLERS
+/*******************************************/
+
+.stylers {
+  width: 964px;
+  margin: 0 auto;
+}
+
+.stylers1,
+.stylers2,
+.stylers3,
+.stylers4 {
+  float: left;
+  width: 25%;
+}
+
+.stylers h1 {
+  font-size: 3rem;
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.stylers h3,
+.stylers p {
+  text-align: center;
+}
+
+.save {
+  margin: 0 auto;
+  width: 964px;
+}
+
+.lookbook {
+  width: 100%;
+  display: inline-block;
+}
+
+/******************************************
+/* FOOTER
+/*******************************************/
+
+footer {
+  background: black;
+  color: white;
+  width: 100%;
+  margin: 0 auto;
+  height: 300px;
+}
+
+.footer1,
+.footer2,
+.footer3,
+.footer4 {
+  float: left;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.bottom__footer {
+  color: white;
+  background: black;
+  padding: 50px;
+  margin: 0;
+  border-top: 2px solid white;
+}
+
+.bottom__footer a {
+  color: white;
+}
+
+/******************************************
+/* MEDIA QUERIES STYLES
+/*******************************************/
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links,
+  .content-right {
+    display: none;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: center;
+  }
+
+  .toggle-bar {
+    display: flex;
+  }
+}
