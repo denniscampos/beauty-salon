@@ -263,8 +263,8 @@ main {
 }
 
 .momentum-container-right img {
-  object-fit: cover;
-  height: 300px;
+  width: 100%;
+  height: auto;
 }
 
 /******************************************
@@ -514,5 +514,12 @@ footer {
   .description-container-2,
   .description-container-3 {
     margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .momentum-container-right img {
+    height: auto;
+    width: 100%;
   }
 }
