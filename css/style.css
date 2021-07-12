@@ -1,8 +1,10 @@
 /* Box Model Hack */
-* {
-  box-sizing: border-box;
-  margin: 0;
+*,
+*::before,
+*::after {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /******************************************
@@ -117,9 +119,6 @@ main {
   flex-direction: column;
   padding-top: 100px;
   padding-left: 100px;
-  /* align-items: center;
-  justify-content: center;
-  height: 100vh; */
 }
 
 .hero-top {
@@ -203,14 +202,14 @@ main {
 .description-container-2 img,
 .description-container-3 img {
   object-fit: contain;
-  height: 100px;
+  height: 80px;
   margin-bottom: 20px;
 }
 
 .description-container-1 span,
 .description-container-2 span,
 .description-container-3 span {
-  font-weight:bold;
+  font-weight: bold;
   white-space: nowrap;
 }
 
@@ -224,75 +223,158 @@ main {
   color: rgb(99, 98, 98);
 }
 
-
 /******************************************
 /* MOMENTUM
 /*******************************************/
 
 .momentum {
-  background: #F2F5F6;
+  background: #f2f5f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px 50px;
 }
 
-.momentum__left {
-  float: left;
-  margin: 0 1.5%;
-  width: 482px;
+.momentum-container-left {
+  width: 40%;
+  overflow: hidden;
 }
 
-.momentum__image {
-  display: inline-block;
-  margin: 0 1.5%;
-  width: 25%;
+.momentum-container-left h3 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
-.momentum__image img {
-  width: 400px;
+.momentum-container-left p {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  margin-bottom: 20px;
 }
 
-.read {
-  background: rgb(0, 0, 0);
+.momentum-container-left button {
+  margin: 20px 0;
+  padding: 15px 20px;
   color: white;
+  background: #000;
   border: none;
-  padding: 20px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.momentum-container-right img {
+  object-fit: cover;
+  height: 300px;
 }
 
 /******************************************
 /* STYLERS
 /*******************************************/
 
+.section-title {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 50px;
+}
+
+.border-bottom {
+  text-align: center;
+  margin: 20px auto 0 auto;
+  width: 35px;
+  height: 4px;
+  display: block;
+  border-radius: 50px;
+  background: #000;
+}
+
 .stylers {
-  width: 964px;
-  margin: 0 auto;
-}
-
-.stylers1,
-.stylers2,
-.stylers3,
-.stylers4 {
-  float: left;
-  width: 25%;
-}
-
-.stylers h1 {
-  font-size: 3rem;
-  font-weight: lighter;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-transform: uppercase;
   text-align: center;
-  margin-top: 100px;
+  gap: 15px;
+  margin-bottom: 100px;
 }
 
-.stylers h3,
-.stylers p {
-  text-align: center;
+.stylist-1 img,
+.stylist-2 img,
+.stylist-3 img,
+.stylist-4 img {
+  object-fit: contain;
+  height: 400px;
 }
 
-.save {
-  margin: 0 auto;
-  width: 964px;
+/******************************************
+/* APPOINTMENTS HERO
+/*******************************************/
+
+.appointments {
+  height: 600px;
+  margin: 0 30px;
 }
+
+.appointments-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+
+.appointments-container span {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.appointments-container p {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  max-width: 11em;
+  overflow-wrap: break-word;
+  line-height: 3rem;
+  margin-bottom: 30px;
+}
+
+.appointments-container button {
+  margin: 20px 0;
+  padding: 20px 20px;
+  color: white;
+  background: #000;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 200px;
+}
+
+.appointments-hero {
+  background-image: url(img/Promo-Banner-Image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70%;
+}
+
+/******************************************
+/* lookbook section
+/*******************************************/
 
 .lookbook {
-  width: 100%;
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.test-1,
+.test-2,
+.test-3 {
+  display: flex;
+
+  flex-direction: column;
+  gap: 5px;
 }
 
 /******************************************
@@ -392,11 +474,19 @@ footer {
   .hero-top > h1 {
     font-size: 10vw;
   }
+
+  .momentum {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .momentum-container-left {
+    width: auto;
+  }
 }
 
 /* description */
 @media screen and (max-width: 812px) {
-
   main {
     margin-bottom: -140px;
   }
@@ -404,7 +494,7 @@ footer {
   .description-container-1,
   .description-container-2,
   .description-container-3 {
-    width:60%;
+    width: 60%;
   }
 
   .description-container-1,
@@ -412,6 +502,4 @@ footer {
   .description-container-3 {
     margin-top: 20px;
   }
-
-
 }
