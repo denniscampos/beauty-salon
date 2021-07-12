@@ -176,33 +176,56 @@ main {
 /*******************************************/
 
 .description {
-  width: 964px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 30px;
+  margin-bottom: 100px;
 }
 
-.description1,
-.description2,
-.description3 {
-  float: left;
-  width: 33.33%;
-  text-align: center;
-  padding-bottom: 200px;
+.description-container-1,
+.description-container-2,
+.description-container-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  margin: 0 50px;
 }
 
-.description1 img,
-.description2 img,
-.description3 img {
+.description-container-1 img,
+.description-container-2 img,
+.description-container-3 img {
+  object-fit: contain;
   height: 100px;
-  width: 120px;
+  margin-bottom: 20px;
 }
+
+.description-container-1 span,
+.description-container-2 span,
+.description-container-3 span {
+  font-weight:bold;
+  white-space: nowrap;
+}
+
+.description-container-1 p,
+.description-container-2 p,
+.description-container-3 p {
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.4rem;
+  font-size: 0.9rem;
+  color: rgb(99, 98, 98);
+}
+
 
 /******************************************
 /* MOMENTUM
 /*******************************************/
 
 .momentum {
-  width: 964px;
-  margin: 0 auto;
+  background: #F2F5F6;
 }
 
 .momentum__left {
@@ -364,4 +387,26 @@ footer {
   .hero-top > h1 {
     font-size: 10vw;
   }
+}
+
+/* description */
+@media screen and (max-width: 812px) {
+
+  main {
+    margin-bottom: -140px;
+  }
+
+  .description-container-1,
+  .description-container-2,
+  .description-container-3 {
+    width:60%;
+  }
+
+  .description-container-1,
+  .description-container-2,
+  .description-container-3 {
+    margin-top: 20px;
+  }
+
+
 }
