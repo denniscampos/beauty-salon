@@ -13,6 +13,8 @@
 
     <!-- external CSS link -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- AOS ANIMATION  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -51,7 +53,7 @@
     </header>
     <!-- hero section  -->
     <main>
-      <div class="hero-img">
+      <div class="hero-img" data-aos="fade-left">
         <div class="hero-container">
           <div class="hero-top">
             <h1>BLONDE & HIGHLIGHT</h1>
@@ -70,12 +72,12 @@
         </div>
       </div>
     </main>
-    <!-- hero section  -->
+    <!-- end hero section  -->
 
     <!-- description section  -->
     <section class="description">
       <div class="description-container-1">
-        <img src="img/quality-icon-01.png" alt="" />
+        <img src="img/quality-icon-01.png" alt="" data-aos="fade-right" />
         <span>EXPERT BEAUTICIANS</span>
         <p>
           Beauty Experts dolor sit amet semiadicing elit maecenas sa faubus
@@ -83,7 +85,7 @@
         </p>
       </div>
       <div class="description-container-2">
-        <img src="img/quality-icon-02.png" alt="" />
+        <img src="img/quality-icon-02.png" alt="" data-aos="slide-down" />
         <span>QUALITY SERVICES</span>
         <p>
           Beauty Experts dolor sit amet semiadicing elit maecenas sa faubus
@@ -91,7 +93,7 @@
         </p>
       </div>
       <div class="description-container-3">
-        <img src="img/quality-icon-03.png" alt="" />
+        <img src="img/quality-icon-03.png" alt="" data-aos="fade-right" />
         <span>BEAUTFY PRODUCTS</span>
         <p>
           Beauty Experts dolor sit amet semiadicing elit maecenas sa faubus
@@ -103,7 +105,7 @@
 
     <!-- momentum section-->
     <section class="momentum">
-      <div class="momentum-container-left">
+      <div class="momentum-container-left" data-aos="fade-right">
         <h3>Make Your Own Momentum</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, error
@@ -116,35 +118,35 @@
           <i class="fas fa-ellipsis-h"></i> read more
         </button>
       </div>
-      <div class="momentum-container-right">
+      <div class="momentum-container-right" data-aos="fade-left">
         <img src="img/Home3-Video.jpg" alt="" />
       </div>
     </section>
     <!-- momentum section-->
 
     <!-- stylers section  -->
-    <div class="section-title">
+    <div class="section-title" data-aos="flip-down">
       <h1>our stylers</h1>
       <span class="border-bottom"></span>
     </div>
     <section class="stylers">
-      <div class="stylist-1">
+      <div class="stylist-1" data-aos="fade-right">
         <img src="img/Styler-01.jpg" alt="" />
         <h3>alita williams</h3>
         <span>- colourist</span>
       </div>
       <div class="stylist-2">
-        <img src="img/Styler-02.jpg" alt="" />
+        <img src="img/Styler-02.jpg" alt="" data-aos="fade-right" />
         <h3>ayesha lake</h3>
         <span>- styler</span>
       </div>
       <div class="stylist-3">
-        <img src="img/Styler-03.jpg" alt="" />
+        <img src="img/Styler-03.jpg" alt="" data-aos="fade-left" />
         <h3>alita williams</h3>
         <span>- beautician</span>
       </div>
       <div class="stylist-4">
-        <img src="img/Styler-01.jpg" alt="" />
+        <img src="img/Styler-01.jpg" alt="" data-aos="fade-left" />
         <h3>alita williams</h3>
         <span>- styler</span>
       </div>
@@ -152,7 +154,7 @@
     <!-- stylers section  -->
 
     <!-- appointment section  -->
-    <section class="appointments">
+    <section class="appointments" data-aos="flip-up">
       <div class="appointments-hero">
         <div class="appointments-container">
           <span>colour day offer!</span>
@@ -172,16 +174,16 @@
     </div>
     <section class="lookbook">
       <div class="lookbook-container-1">
-        <img src="img/lookbook1.JPG" alt="" />
-        <img src="img/lookbook2.JPG" alt="" />
+        <img src="img/lookbook1.JPG" alt="" data-aos="flip-right" />
+        <img src="img/lookbook2.JPG" alt="" data-aos="flip-right" />
       </div>
       <div class="lookbook-container-2">
-        <img src="img/Masonry-01.jpg" alt="" />
-        <img src="img/Gallery-04.jpg" alt="" />
+        <img src="img/Masonry-01.jpg" alt="" data-aos="flip-up" />
+        <img src="img/Gallery-04.jpg" alt="" data-aos="flip-down" />
       </div>
       <div class="lookbook-container-3">
-        <img src="img/Gallery-02.jpg" alt="" />
-        <img src="img/Masonry-03.jpg" alt="" />
+        <img src="img/Gallery-02.jpg" alt="" data-aos="flip-left" />
+        <img src="img/Masonry-03.jpg" alt="" data-aos="flip-left" />
       </div>
     </section>
     <!-- Look Book section -->
@@ -222,6 +224,7 @@
       </div>
     </footer>
     <!-- footer section  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
